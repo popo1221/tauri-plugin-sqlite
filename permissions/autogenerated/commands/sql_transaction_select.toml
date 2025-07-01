@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-sql-transaction-select"
+description = "Enables the sql_transaction_select command without any pre-configured scope."
+commands.allow = ["sql_transaction_select"]
+
+[[permission]]
+identifier = "deny-sql-transaction-select"
+description = "Denies the sql_transaction_select command without any pre-configured scope."
+commands.deny = ["sql_transaction_select"]

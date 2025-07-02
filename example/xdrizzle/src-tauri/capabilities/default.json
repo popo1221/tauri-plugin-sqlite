@@ -1,0 +1,17 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "opener:default",
+    "sqlite:default",
+    "sqlite:allow-execute",
+    "sqlite:allow-sql-transaction-begin",
+    "sqlite:allow-sql-transaction-commit",
+    "sqlite:allow-sql-transaction-execute",
+    "sqlite:allow-sql-transaction-rollback",
+    "sqlite:allow-sql-transaction-select"
+  ]
+}

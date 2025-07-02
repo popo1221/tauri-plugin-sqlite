@@ -6,7 +6,7 @@
   "authors": [
     "Tauri Programme within The Commons Conservancy"
   ],
-  "repository": "https://github.com/tauri-apps/plugins-workspace",
+  "repository": "https://github.com/popo1221/tauri-plugin-sqlite",
   "type": "module",
   "types": "./dist-js/index.d.ts",
   "main": "./dist-js/index.cjs",

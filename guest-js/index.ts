@@ -4,6 +4,12 @@
 
 import { invoke } from '@tauri-apps/api/core'
 
+export interface DatabaseExecutor {
+  execute(query: string, bindValues?: unknown[]): Promise<QueryResult>;
+  select<T>(query: string, bindValues?: unknown[]): Promise<T>;
+  begainTransaction(): Promise<Transaction>;
+}
+
 export interface QueryResult {
   /** The number of rows affected by the query. */
   rowsAffected: number
@@ -24,7 +30,7 @@ export interface QueryResult {
  * The `Database` class serves as the primary interface for
  * communicating with the rust side of the sql plugin.
  */
-export class Database {
+export class Database implements DatabaseExecutor {
   path: string
   constructor(path: string) {
     this.path = path
@@ -172,10 +178,13 @@ export class Database {
   }
 }
 
-export class Transaction {
+export class Transaction implements DatabaseExecutor {
   id: number
   constructor(id: number) {
     this.id = id
+  }
+  begainTransaction(): Promise<Transaction> {
+    throw new Error('Method not implemented.');
   }
 
   async execute(query: string, bindValues?: unknown[]): Promise<QueryResult> {

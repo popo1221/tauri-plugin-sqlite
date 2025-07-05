@@ -131,7 +131,7 @@ impl Builder {
     }
 
     pub fn build<R: Runtime>(mut self) -> TauriPlugin<R, Option<PluginConfig>> {
-        PluginBuilder::<R, Option<PluginConfig>>::new("sqlite")
+        PluginBuilder::<R, Option<PluginConfig>>::new("sqlite-plus")
             .invoke_handler(tauri::generate_handler![
                 commands::load,
                 commands::execute,

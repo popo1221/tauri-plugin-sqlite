@@ -1,5 +1,5 @@
 {
-  "name": "tauri-plugin-sqlite",
+  "name": "tauri-plugin-sqlite-plus",
   "version": "0.0.1",
   "description": "Interface with SQL databases",
   "license": "MIT OR Apache-2.0",

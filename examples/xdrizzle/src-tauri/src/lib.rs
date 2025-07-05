@@ -1,4 +1,4 @@
-use tauri_plugin_sqlite::{Migration, MigrationKind};
+use tauri_plugin_sqlite_plus::{Migration, MigrationKind};
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
@@ -19,7 +19,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(
-            tauri_plugin_sqlite::Builder::default()
+            tauri_plugin_sqlite_plus::Builder::default()
                 .add_migrations("sqlite:xdrizzle.db", migrations)
                 .build(),
         )

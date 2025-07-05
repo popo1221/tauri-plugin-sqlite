@@ -6,12 +6,12 @@
   "permissions": [
     "core:default",
     "opener:default",
-    "sqlite:default",
-    "sqlite:allow-execute",
-    "sqlite:allow-sql-transaction-begin",
-    "sqlite:allow-sql-transaction-commit",
-    "sqlite:allow-sql-transaction-execute",
-    "sqlite:allow-sql-transaction-rollback",
-    "sqlite:allow-sql-transaction-select"
+    "sqlite-plus:default",
+    "sqlite-plus:allow-execute",
+    "sqlite-plus:allow-sql-transaction-begin",
+    "sqlite-plus:allow-sql-transaction-commit",
+    "sqlite-plus:allow-sql-transaction-execute",
+    "sqlite-plus:allow-sql-transaction-rollback",
+    "sqlite-plus:allow-sql-transaction-select"
   ]
 }

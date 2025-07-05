@@ -28,7 +28,7 @@ Also allows to load or close a connection.
 <tr>
 <td>
 
-`sqlite:allow-close`
+`sqlite-plus:allow-close`
 
 </td>
 <td>
@@ -41,7 +41,7 @@ Enables the close command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-close`
+`sqlite-plus:deny-close`
 
 </td>
 <td>
@@ -54,7 +54,7 @@ Denies the close command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-execute`
+`sqlite-plus:allow-execute`
 
 </td>
 <td>
@@ -67,7 +67,7 @@ Enables the execute command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-execute`
+`sqlite-plus:deny-execute`
 
 </td>
 <td>
@@ -80,7 +80,7 @@ Denies the execute command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-load`
+`sqlite-plus:allow-load`
 
 </td>
 <td>
@@ -93,7 +93,7 @@ Enables the load command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-load`
+`sqlite-plus:deny-load`
 
 </td>
 <td>
@@ -106,7 +106,7 @@ Denies the load command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-select`
+`sqlite-plus:allow-select`
 
 </td>
 <td>
@@ -119,7 +119,7 @@ Enables the select command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-select`
+`sqlite-plus:deny-select`
 
 </td>
 <td>
@@ -132,7 +132,7 @@ Denies the select command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-sql-transaction-begin`
+`sqlite-plus:allow-sql-transaction-begin`
 
 </td>
 <td>
@@ -145,7 +145,7 @@ Enables the sql_transaction_begin command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-sql-transaction-begin`
+`sqlite-plus:deny-sql-transaction-begin`
 
 </td>
 <td>
@@ -158,7 +158,7 @@ Denies the sql_transaction_begin command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-sql-transaction-commit`
+`sqlite-plus:allow-sql-transaction-commit`
 
 </td>
 <td>
@@ -171,7 +171,7 @@ Enables the sql_transaction_commit command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-sql-transaction-commit`
+`sqlite-plus:deny-sql-transaction-commit`
 
 </td>
 <td>
@@ -184,7 +184,7 @@ Denies the sql_transaction_commit command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-sql-transaction-execute`
+`sqlite-plus:allow-sql-transaction-execute`
 
 </td>
 <td>
@@ -197,7 +197,7 @@ Enables the sql_transaction_execute command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-sql-transaction-execute`
+`sqlite-plus:deny-sql-transaction-execute`
 
 </td>
 <td>
@@ -210,7 +210,7 @@ Denies the sql_transaction_execute command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-sql-transaction-rollback`
+`sqlite-plus:allow-sql-transaction-rollback`
 
 </td>
 <td>
@@ -223,7 +223,7 @@ Enables the sql_transaction_rollback command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-sql-transaction-rollback`
+`sqlite-plus:deny-sql-transaction-rollback`
 
 </td>
 <td>
@@ -236,7 +236,7 @@ Denies the sql_transaction_rollback command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:allow-sql-transaction-select`
+`sqlite-plus:allow-sql-transaction-select`
 
 </td>
 <td>
@@ -249,7 +249,7 @@ Enables the sql_transaction_select command without any pre-configured scope.
 <tr>
 <td>
 
-`sqlite:deny-sql-transaction-select`
+`sqlite-plus:deny-sql-transaction-select`
 
 </td>
 <td>

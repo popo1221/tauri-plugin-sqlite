@@ -52,7 +52,7 @@ export class Database implements DatabaseExecutor {
    * ```
    */
   static async load(path: string): Promise<Database> {
-    const _path = await invoke<string>('plugin:sqlite|load', {
+    const _path = await invoke<string>('plugin:sqlite-plus|load', {
       db: path
     })
 
@@ -113,7 +113,7 @@ export class Database implements DatabaseExecutor {
    */
   async execute(query: string, bindValues?: unknown[]): Promise<QueryResult> {
     const [rowsAffected, lastInsertId] = await invoke<[number, number]>(
-      'plugin:sqlite|execute',
+      'plugin:sqlite-plus|execute',
       {
         db: this.path,
         query,
@@ -145,7 +145,7 @@ export class Database implements DatabaseExecutor {
    * ```
    */
   async select<T>(query: string, bindValues?: unknown[]): Promise<T> {
-    const result = await invoke<T>('plugin:sqlite|select', {
+    const result = await invoke<T>('plugin:sqlite-plus|select', {
       db: this.path,
       query,
       values: bindValues ?? []
@@ -171,7 +171,7 @@ export class Database implements DatabaseExecutor {
    * @param db - Optionally state the name of a database if you are managing more than one. Otherwise, all database pools will be in scope.
    */
   async close(db?: string): Promise<boolean> {
-    const success = await invoke<boolean>('plugin:sqlite|close', {
+    const success = await invoke<boolean>('plugin:sqlite-plus|close', {
       db
     })
     return success
@@ -205,7 +205,7 @@ export class Transaction implements DatabaseExecutor {
 }
 
 export async function beginTransaction(db: Database) {
-  const result = await invoke<number>('plugin:sqlite|sql_transaction_begin', {
+  const result = await invoke<number>('plugin:sqlite-plus|sql_transaction_begin', {
     db: db.path
   })
   return result
@@ -217,7 +217,7 @@ export async function executeTransaction(
   bindValues?: unknown[]
 ): Promise<QueryResult> {
   const [rowsAffected, lastInsertId] = await invoke<[number, number]>(
-    'plugin:sqlite|sql_transaction_execute',
+    'plugin:sqlite-plus|sql_transaction_execute',
     {
       transactionInstanceId,
       query,
@@ -235,7 +235,7 @@ export async function selectTransaction<T>(
   query: string,
   bindValues?: unknown[]
 ): Promise<T> {
-  const result = await invoke<T>('plugin:sqlite|sql_transaction_select', {
+  const result = await invoke<T>('plugin:sqlite-plus|sql_transaction_select', {
     transactionInstanceId,
     query,
     values: bindValues ?? []
@@ -246,7 +246,7 @@ export async function selectTransaction<T>(
 export async function rollbackTransaction(
   transactionInstanceId: number
 ): Promise<void> {
-  const result = await invoke<void>('plugin:sqlite|sql_transaction_rollback', {
+  const result = await invoke<void>('plugin:sqlite-plus|sql_transaction_rollback', {
     transactionInstanceId
   })
   return result
@@ -255,7 +255,7 @@ export async function rollbackTransaction(
 export async function commitTransaction(
   transactionInstanceId: number
 ): Promise<void> {
-  const result = await invoke<void>('plugin:sqlite|sql_transaction_commit', {
+  const result = await invoke<void>('plugin:sqlite-plus|sql_transaction_commit', {
     transactionInstanceId
   })
   return result

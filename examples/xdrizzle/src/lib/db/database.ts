@@ -1,4 +1,4 @@
-import { Database } from "tauri-plugin-sqlite";
+import { Database } from "tauri-plugin-sqlite-plus";
 import { drizzle } from "../drizzle";
 
 export async function getDb() {

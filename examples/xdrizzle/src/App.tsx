@@ -9,7 +9,7 @@ import {
   executeTransaction,
   rollbackTransaction,
   selectTransaction,
-} from "tauri-plugin-sqlite";
+} from "tauri-plugin-sqlite-plus";
 import { dbPromise } from "./lib/db/database";
 import { postsTable, usersTable } from "./lib/db/schema";
 

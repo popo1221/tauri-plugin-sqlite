@@ -4211,7 +4211,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tauri-plugin-sqlite"
+name = "tauri-plugin-sqlite-plus"
 version = "0.0.1"
 dependencies = [
  "futures-core",
@@ -5637,7 +5637,7 @@ dependencies = [
  "tauri",
  "tauri-build",
  "tauri-plugin-opener",
- "tauri-plugin-sqlite",
+ "tauri-plugin-sqlite-plus",
 ]
 
 [[package]]
